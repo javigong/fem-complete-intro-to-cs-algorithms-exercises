@@ -15,7 +15,7 @@ function bubbleSort(nums) {
   let length = nums.length;
   do {
     swaps = false;
-    for (let i = 1; i <= length; i++) {
+    for (let i = 1; i < length; i++) {
       if (nums[i - 1] > nums[i]) {
         let a = nums[i - 1];
         let b = nums[i];

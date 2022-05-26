@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "test": "jest"
   },
   "dependencies": {
     "lodash": "4.17.21",
@@ -16,7 +17,8 @@
     "xxhashjs": "0.2.2"
   },
   "devDependencies": {
-    "@babel/core": "7.2.0"
+    "@babel/core": "7.2.0",
+    "jest": "^28.1.0"
   },
   "resolutions": {
     "@babel/preset-env": "7.13.8"
