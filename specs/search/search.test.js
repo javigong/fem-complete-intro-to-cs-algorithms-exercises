@@ -8,7 +8,22 @@ function linearSearch(id, array) {
 }
 
 function binarySearch(id, array) {
-  // code goes here
+  let direction = "left";
+  for (
+    let i = array.length;
+    i >= 0;
+    direction === "left"
+      ? (i = Math.floor(i - i / 2))
+      : (i = Math.floor(i + i / 2))
+  ) {
+    if (array[i].id === id) {
+      return array[i];
+    } else if (array[i].id < id) {
+      direction = "left";
+    } else {
+      direction = "right";
+    }
+  }
 }
 
 // unit tests
@@ -30,12 +45,12 @@ test.skip("linear search", function () {
       { id: 2, name: "Marc" },
       { id: 51, name: "Chris" },
       lookingFor,
-      { id: 14, name: "Ben" }
+      { id: 14, name: "Ben" },
     ])
   ).toBe(lookingFor);
 });
 
-test.skip("binary search", function () {
+test("binary search", function () {
   const lookingFor = { id: 23, name: "Brian" };
   expect(
     binarySearch(23, [
@@ -52,7 +67,7 @@ test.skip("binary search", function () {
       { id: 19, name: "Marc" },
       { id: 21, name: "Chris" },
       lookingFor,
-      { id: 24, name: "Ben" }
+      { id: 24, name: "Ben" },
     ])
   ).toBe(lookingFor);
 });
