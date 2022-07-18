@@ -9,6 +9,7 @@ function linearSearch(id, array) {
       return array[i];
     }
   }
+
   return void 0;
 }
 
@@ -17,21 +18,21 @@ function binarySearch(id, array) {
   let max = array.length - 1;
   let index;
   let element;
-  
+
   while (min <= max) {
     index = Math.floor((min + max) / 2);
     element = array[index];
 
-    if (element === id) return element;
-
+    // if element.id is bigger move max index to the left (-1)
     if (element.id > id) {
       max = index - 1;
-    }
-
-    if (element.id < id) {
-      max = index + 1;
-    }
+    // if element.id is smaller move min index to the right (+1)
+    } else if (element.id < id) {
+      min = index + 1;
+    // if element.id matches our target id return it
+    } else return element;
   }
+
   return void 0;
 }
 
