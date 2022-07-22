@@ -19,7 +19,7 @@
   left  - Node    - the subtree containing Node's with values less than the current Node's value
   right - Node    - the subtree containing Node's with values greater than the current Node's value
 */
-const { add } = require("lodash");
+// const { add } = require("lodash");
 
 class Tree {
   constructor() {
