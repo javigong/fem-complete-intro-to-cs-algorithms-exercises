@@ -8,6 +8,10 @@
   Bubble sort works by comparing two adjacent numbers next to each other and then
   swapping their places if the smaller index's value is larger than the larger
   index's. Continue looping through until all values are in ascending order
+
+  - Time complexity: sorted list is the best case with O(n), average case is O(n^2), worst case is O(n^2).
+  - Space complexity is constant, we operate in the array itself, is O(1).
+
 */
 
 function bubbleSort(nums) {
